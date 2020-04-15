@@ -46,7 +46,13 @@
       </div>
       <!-- content -->
       <div class="content">
-        
+        <div class="welcome">
+          <h2>welcome</h2>
+        </div>
+        <section>
+          <div class="loader"></div>
+          <div class="count"></div>
+        </section>
       </div>
       <!-- links -->
       <div class="links">
@@ -85,6 +91,24 @@
         /></a>
       </div>
     </div>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <!-- js for this app -->
+      <script>
+        $(document).ready(function(){
+          var count = 0;
+          var counter = setInterval(function(){
+            if(count < 101){
+              $('.count').text(count + '%');
+              $('.loader').css('width' , count + '%');
+              count++;
+            }
+            else {
+              clearInterval(counter)
+            }
+          },80)
+        })
+      </script>
     <!-- js for menu -->
     <script src="./assets/js/main.js"></script>
   </body>

@@ -22,9 +22,65 @@ body {
   padding: 0;
 }
 
-.content {
+.menu {
+  z-index: 1;
+  mix-blend-mode: difference;
+}
+
+/* .content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+} */
+
+.loader {
+  position: absolute;
+  height: 100%;
+  background: #000;
+}
+
+section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  animation: fadeout .5s linear forwards;
+  animation-delay: 8.5s;
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.count {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18vw;
+  font-weight: 800;
+  mix-blend-mode: difference;
+  /* width: 550px;
+  text-align: right; */
+}
+
+.welcome {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6em;
 }
